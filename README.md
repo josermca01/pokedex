@@ -17,14 +17,6 @@ O aplicativo tem o objetivo de criar uma lista dos Pokémons existentes, utiliza
 ## Como rodar o aplicativo
 Antes de inciar, você precisa instalar o aplicativo Expo Go em seu dispositivo móvel (Android ou IOS).
 
-### Usando Expo Snack
-Para rodar o aplicativo utilizando o Expo Snack, basta fazer os seguintes passos:
-
- - Copiar a seguinte url: `exp://exp.host/@julianoccm/Pokedex`.
- - Acessar o aplicativo Expo Go.
- - Clicar em `Open from Clipboard`
- - Pronto! As próximas vezes que for acessar basta procurar a opção com a logo de uma Pokébola :)
-
 ### Rodando localmente
 Para rodar o aplicativo localmente você precisa ter o `node`, `npm`, e `expo-cli` instalado em sua máquina, tendo esses itens instalados basta seguir os seguintes passos:
  
@@ -33,15 +25,6 @@ Para rodar o aplicativo localmente você precisa ter o `node`, `npm`, e `expo-cl
  - Rodar o comando: `expo start`.
  - E escanear o QR Code que aparecer no seu terminal.
  - Pronto!
-
-## Baixando o APK
-Para instalar o APK do aplicativo em seu dispositivo Android, basta ir no seguinte link: `https://github.com/JulianoCCMoreira/Pokedex/releases` e baixar a última versão do APK, que está nomeada **Pokedex-{Versão}.apk**.
-> A última versão é a que tem um marcador verde escrito `latest`.
-
-## Telas do aplicativo
-As telas do aplicativo foram desenvolvidas utilizando os designs dos artistas como base e adaptadas de meu modo. Segue os créditos:
- - Ricardo Schiniegoski: [link para o design utilizado.](https://www.figma.com/community/file/979132880663340794)
- - Emmanuel García: [link para o design utilizado.](https://www.figma.com/community/file/893705420616737018)
 
 #### Print das telas
 
