@@ -10,7 +10,7 @@ export const PokeCardContainer = styled.TouchableOpacity`
 `;
 
 export const PokeCardId = styled.Text`
-  align-self: flex-end;
+  align-self: flex-start;
   padding: 10px;
   color: ${(props) => props.textColor};
   font-size: 18px;
@@ -23,21 +23,6 @@ export const PokeCardImage = styled.Image`
   margin-bottom: 10px;
 `;
 
-export const PokeCardNameContainer = styled.View`
-  background-color: ${(props) => props.bgColor};
-  flex: 1;
-  width: 100%;
-  height: 40px;
-  border-bottom-left-radius: 17px;
-  border-bottom-right-radius: 17px;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const PokeCardName = styled.Text`
-  font-size: 20px;
-  color: white;
-`;
 export const PokeCardTypeName = styled.Text`
   font-size: 20px;
   color: black;

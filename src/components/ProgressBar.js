@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 
 const ProgressBar = ({ value, cor }) => {
-  if (value >= 100) value = 100;
+  if (value >= 122) value = 122;
 
   return (
     <View

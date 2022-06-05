@@ -20,7 +20,7 @@ const StatsItem = ({ value, cor, title }) => {
           <StatsValueText>{value}</StatsValueText>
         </View>
       </View>
-      <View style={{ width: 200, height: 20 }}>
+      <View style={{ width: 255, height: 20 }}>
         <ProgressBar cor={cor} value={value} />
       </View>
     </View>

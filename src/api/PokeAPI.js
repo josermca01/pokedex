@@ -6,6 +6,10 @@ const PokeAPI = axios.create({
   baseURL: "https://pokeapi.co/api/v2/pokemon",
 });
 
+const PokeAPIType = axios.create({
+  baseURL: "https://pokeapi.co/api/v2/type",
+});
+
 const getBasicPokemonByNameId = (pokemonID) => {
   return PokeAPI.get(pokemonID)
     .then((response) => {
@@ -111,11 +115,34 @@ const getEvolutionsByName = (pokemonName) => {
     });
 };
 
+const getPokemonByType = (typeId) => {
+  return axios
+    .get("https://pokeapi.co/api/v2/type/" + typeId)
+    .then((response) => {
+      const type = response.data.type.url;
+      let pokemonTypeNames;
+      let pokemonsList = [];
+
+      for(let pokemon of type.pokemon)
+      pokemonTypeNames.push(pokemon)
+
+      for (let pokemon of pokemonTypeNames) {
+        if (pokemon != null) {
+           getBasicPokemonByNameId(pokemon).then((data) => {
+            pokemonsList.push(data);
+          });
+        }
+      }
+
+      return pokemonsList;
+    });
+};
 module.exports = {
   getPokemonByName,
   getEvolutionsByName,
   getPokemonBasicOffset,
   getBasicPokemonByNameId,
+  getPokemonByType
 };
 
 export default PokeAPI;

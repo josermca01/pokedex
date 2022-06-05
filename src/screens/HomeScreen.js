@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Text, View, FlatList } from "react-native";
 
-import { getBasicPokemonByNameId, getPokemonBasicOffset } from "../api/PokeAPI";
+import { getBasicPokemonByNameId, getPokemonBasicOffset,getPokemonByType } from "../api/PokeAPI";
 
 import ErrorComponent from "../components/ErrorComponent";
 import PokeCard from "../components/PokeCard";
 import SearchBar from "../components/SearchBar";
 import ButtonPokedex from "../components/ButtonPokedex";
 
-let PAGE = 13;
+let PAGE = 7;
 let PREVIUS_PAGE = 0;
 let pokemonsListRef;
 
@@ -16,6 +16,8 @@ const HomeScreen = ({ route, navigation }) => {
   const [error, setError] = useState(false);
   const [search, setSearch] = useState("");
   const [goSearch, setGoSearch] = useState(false);
+  const [searchType, setSearchType] = useState("");
+  const [goSearchType, setGoSearchType] = useState(false);
   const [pokemonsList, setPokemonsList] = useState(route.params.pokemonsList);
 
   const clearStates = () => {
@@ -23,7 +25,7 @@ const HomeScreen = ({ route, navigation }) => {
     setError(false);
     setGoSearch(false);
     setSearch("");
-    PAGE = 13;
+    PAGE = 7;
     PREVIUS_PAGE = 0;
   };
 
@@ -39,6 +41,18 @@ const HomeScreen = ({ route, navigation }) => {
     }
   }, [goSearch]);
 
+  useEffect(() => {
+    if (searchType !== "") {
+      getPokemonByType(searchType.toLowerCase()).then((data) => {
+        if (data !== undefined) {
+          setPokemonsList(data);
+          setError("");
+        } else setError(true);
+      });
+      setGoSearchType(false);
+    }
+  }, [goSearchType]);
+
   return (
     <View style={{ marginBottom: 150 }}>
       <SearchBar
@@ -48,6 +62,16 @@ const HomeScreen = ({ route, navigation }) => {
           if (value == "") clearStates();
         }}
         onEndEditing={() => setGoSearch(true)}
+        placeholder="Digite o nome ou id"
+      />
+
+      <SearchBar
+        value={searchType}
+        onChangeText={(value) => {
+          setSearchType(value);
+          if (value == "") clearStates();
+        }}
+        onEndEditing={() => setGoSearchType(true)}
         placeholder="Digite o nome ou id"
       />
 
@@ -70,14 +94,14 @@ const HomeScreen = ({ route, navigation }) => {
                 return;
               }
 
-              getPokemonBasicOffset(PREVIUS_PAGE - 11, PREVIUS_PAGE).then(
+              getPokemonBasicOffset(PREVIUS_PAGE - 5, PREVIUS_PAGE).then(
                 (data) => {
                   setPokemonsList(() => data.sort((a, b) => a.id - b.id));
                 }
               );
 
-              PREVIUS_PAGE -= 12;
-              PAGE -= 12;
+              PREVIUS_PAGE -= 6;
+              PAGE -= 6;
             }}
           />
           <ButtonPokedex
@@ -86,11 +110,11 @@ const HomeScreen = ({ route, navigation }) => {
             onPress={() => {
               pokemonsListRef.scrollToOffset({ offset: 0, animated: true });
 
-              getPokemonBasicOffset(PAGE, PAGE + 11).then((data) => {
+              getPokemonBasicOffset(PAGE, PAGE + 5).then((data) => {
                 setPokemonsList(() => data.sort((a, b) => a.id - b.id));
               });
-              PAGE += 12;
-              PREVIUS_PAGE += 12;
+              PAGE += 6;
+              PREVIUS_PAGE += 6;
             }}
           />
         </View>
@@ -100,7 +124,7 @@ const HomeScreen = ({ route, navigation }) => {
         <ErrorComponent />
       ) : (
         <FlatList
-          numColumns={2}
+          numColumns={1}
           data={pokemonsList}
           keyExtractor={(pokemon) => pokemon.id}
           ref={(ref) => (pokemonsListRef = ref)}

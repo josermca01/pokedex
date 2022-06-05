@@ -23,12 +23,12 @@ export default function App() {
   });
 
   useEffect(() => {
-    getPokemonBasicOffset(1, 12).then((data) => {
+    getPokemonBasicOffset(1, 6).then((data) => {
       setPokemonsList(() => data.sort((a, b) => a.id - b.id));
     });
   }, []);
 
-  if (pokemonsList.length != 12 || !loaded) return <Loading />;
+  if (pokemonsList.length != 6 || !loaded) return <Loading />;
 
   return (
     <NavigationContainer>
