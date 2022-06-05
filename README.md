@@ -49,5 +49,3 @@ Para rodar o aplicativo localmente você precisa ter o `node`, `npm`, e `expo-cl
 </details>
 
 ---
-
-### Contato: julianocolerecmoreira@gmail.com
