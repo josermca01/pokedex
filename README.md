@@ -47,24 +47,11 @@ Tela de consulta de um pokémon em especifico (prototipo):
 
 #### Print das telas Atuais
 
-<details>
-  <summary>Home</summary>  
-  <img src="https://i.ibb.co/YZ0vgPL/Whats-App-Image-2022-01-06-at-20-12-51.jpg" width="246px"/>
-</details>
+![image](https://user-images.githubusercontent.com/71042131/172070453-bb15a1d2-d43e-4b1d-8870-5cda76eb0a87.png)
 
-<details>
-  <summary>Datalhe Pokémon</summary>  
-  <img src="https://i.ibb.co/ns0sPCG/Whats-App-Image-2022-01-06-at-20-12-51-3.jpg" width="246px"/>
-</details>
+![image](https://user-images.githubusercontent.com/71042131/172070479-9285049e-7ea3-4c29-b25b-ca43094ea900.png)
 
-<details>
-  <summary>Pesquisa Pokémon</summary> 
-  <img src="https://i.ibb.co/B386WfB/Whats-App-Image-2022-01-06-at-20-12-51-1.jpg" width="246px"/>
-</details>
+![image](https://user-images.githubusercontent.com/71042131/172070481-71538ea0-fd97-4a75-bf2c-6fa9cdf5dc22.png)
 
-<details>
-  <summary>Erro pesquisa</summary> 
-  <img src="https://i.ibb.co/2jM2tWH/Whats-App-Image-2022-01-06-at-20-12-51-2.jpg" width="246px"/>
-</details>
-
+![image](https://user-images.githubusercontent.com/71042131/172070488-0f2d2e49-0d8f-4b47-bcf0-8718c319e61d.png)
 ---
