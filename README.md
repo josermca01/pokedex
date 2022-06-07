@@ -14,7 +14,7 @@ Caso não tenha Nodejs instale.
 Link para download do Nodejs (instalar a versão LTS)
 - ```https://nodejs.org/en/download/ ```
 
-Será necessario também tem expo instalado no computador, nesse caso abra o terminal ou prompt de comando(dependendo do seu sistema operacional) e use o comando abaixo:
+Será necessario também ter o expo instalado no computador, nesse caso abra o terminal ou prompt de comando(dependendo do seu sistema operacional) e use o comando abaixo:
 - ``` npm install --global expo-cli ```
 
 Clonar o repositorio do projeto.
