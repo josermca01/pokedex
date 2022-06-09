@@ -7,6 +7,7 @@ import {
   PokeCardNameContainer,
   PokeCardTypeName,
 } from "../styles/PokeCardStyle";
+import BlankSpacer from "react-native-blank-spacer";
 
 import { Text,View } from "react-native";
 
@@ -20,7 +21,7 @@ const PokeCard = ({ id, nome, urlImage, onPress, typeColor ,typeName,typeName2})
       <PokeCardTypeName>{typeName.nome}</PokeCardTypeName>
       {typeName2 != null ?(
       <PokeCardTypeName>{typeName2.nome}</PokeCardTypeName>
-      ):null  }
+      ):<BlankSpacer height={29} />}
     </PokeCardContainer>
   );
 };

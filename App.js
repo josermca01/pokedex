@@ -12,7 +12,6 @@ import { getPokemonBasicOffset } from "./src/api/PokeAPI";
 //Screen's
 import Home from "./src/screens/HomeScreen";
 import DetailsScreen from "./src/screens/DetailsScreen";
-import Credits from "./src/components/Credits";
 
 const Stack = createStackNavigator();
 
@@ -23,12 +22,12 @@ export default function App() {
   });
 
   useEffect(() => {
-    getPokemonBasicOffset(1, 6).then((data) => {
+    getPokemonBasicOffset(1, 12).then((data) => {
       setPokemonsList(() => data.sort((a, b) => a.id - b.id));
     });
   }, []);
 
-  if (pokemonsList.length != 6 || !loaded) return <Loading />;
+  if (pokemonsList.length != 12 || !loaded) return <Loading />;
 
   return (
     <NavigationContainer>
@@ -39,7 +38,6 @@ export default function App() {
           initialParams={{ pokemonsList }}
           options={{
             headerLeft: () => <Header />,
-            headerRight: () => <Credits />,
             headerTitle: "",
           }}
         />

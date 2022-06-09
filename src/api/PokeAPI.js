@@ -22,7 +22,7 @@ const getBasicPokemonByNameId = (pokemonID) => {
           pokemon.forms[0].name.charAt(0).toUpperCase() +
           pokemon.forms[0].name.slice(1),
         url: "https://pokeapi.co/api/v2/pokemon/" + pokemon.forms[0].name,
-        sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`,
+        sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`,
         tipoPrincipal: handlePokemonType(pokemon.types[0].type.name),
         tipoSecundario:
           pokemon.types[1] != null
@@ -115,34 +115,11 @@ const getEvolutionsByName = (pokemonName) => {
     });
 };
 
-const getPokemonByType = (typeId) => {
-  return axios
-    .get("https://pokeapi.co/api/v2/type/" + typeId)
-    .then((response) => {
-      const type = response.data.type.url;
-      let pokemonTypeNames;
-      let pokemonsList = [];
-
-      for(let pokemon of type.pokemon)
-      pokemonTypeNames.push(pokemon)
-
-      for (let pokemon of pokemonTypeNames) {
-        if (pokemon != null) {
-           getBasicPokemonByNameId(pokemon).then((data) => {
-            pokemonsList.push(data);
-          });
-        }
-      }
-
-      return pokemonsList;
-    });
-};
 module.exports = {
   getPokemonByName,
   getEvolutionsByName,
   getPokemonBasicOffset,
-  getBasicPokemonByNameId,
-  getPokemonByType
+  getBasicPokemonByNameId
 };
 
 export default PokeAPI;
