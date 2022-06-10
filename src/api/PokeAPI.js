@@ -88,6 +88,7 @@ const getPokemonByName = (pokemonName) => {
         altura: pokemon.height / 10,
         habilidades: pokemon.abilities,
         status: handleStats(pokemon.stats),
+        moves: pokemon.moves,
       };
     })
     .catch((error) => {});

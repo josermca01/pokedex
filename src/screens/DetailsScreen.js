@@ -205,6 +205,22 @@ const DetailsScreen = ({ route, navigation }) => {
             />
           </View>
         </View>
+        <View style={{ marginTop: 20 }}>
+          <Title textColor={pokemonInfo.tipoPrincipal.cor}>Moves</Title>
+
+          <FlatList
+            data={pokemonInfo.moves}
+            keyExtractor={(move) => move.move.name}
+            renderItem={({ item }) => {
+              return (
+                <AboutValueText>
+                  {item.move.name.charAt(0).toUpperCase() +
+                    item.move.name.slice(1)}
+                </AboutValueText>
+              );
+            }}
+          />
+        </View>
 
         <View
           style={{

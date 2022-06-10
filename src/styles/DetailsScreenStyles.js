@@ -25,8 +25,9 @@ export const PokemonID = styled.Text`
 export const InfoContainer = styled.View`
   background-color: white;
   padding-top: 17%;
+  padding-bottom: 50%;
   width: 95%;
-  height: 70%;
+  height: 95%;
   border-radius: 20px;
   margin: 10px;
   bottom: 80px;
