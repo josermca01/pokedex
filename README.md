@@ -46,12 +46,18 @@ Tela de consulta de um pokémon em especifico (prototipo):
 
 
 #### Print das telas Atuais
+![image](https://user-images.githubusercontent.com/71042131/172740685-fa16bda4-8f1c-4822-a726-6819b69800c9.png)
 
-![image](https://user-images.githubusercontent.com/71042131/172070453-bb15a1d2-d43e-4b1d-8870-5cda76eb0a87.png)
+![image](https://user-images.githubusercontent.com/71042131/172740699-0a243f5e-cf71-4181-945f-7e63902e5649.png)
 
-![image](https://user-images.githubusercontent.com/71042131/172070479-9285049e-7ea3-4c29-b25b-ca43094ea900.png)
+![image](https://user-images.githubusercontent.com/71042131/172740713-d48f750c-cba9-44a5-ba90-5e6a606be055.png)
 
-![image](https://user-images.githubusercontent.com/71042131/172070481-71538ea0-fd97-4a75-bf2c-6fa9cdf5dc22.png)
+![image](https://user-images.githubusercontent.com/71042131/172740727-52bcc1de-5828-45c1-85c2-164722855027.png)
 
-![image](https://user-images.githubusercontent.com/71042131/172070488-0f2d2e49-0d8f-4b47-bcf0-8718c319e61d.png)
+![image](https://user-images.githubusercontent.com/71042131/172740741-edc5b4d9-622d-4eeb-b82d-babebaf2af90.png)
+
+![image](https://user-images.githubusercontent.com/71042131/172740760-9ada37f6-58bb-4e6c-98ec-2bda05e1be72.png)
+
+![image](https://user-images.githubusercontent.com/71042131/172740771-54fb27a3-f617-4082-9cf1-37bd55097d45.png)
+
 ---
