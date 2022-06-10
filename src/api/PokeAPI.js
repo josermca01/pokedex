@@ -50,6 +50,22 @@ const getPokemonBasicOffset = async (initial, limit) => {
   return promisse;
 };
 
+const getPokemonBasicOffsetType = async (initial, limit,pokemonstypelist) => {
+  const pokemons = [];
+
+  const promisse = new Promise(async (resolve, reject) => {
+    for (initial; initial <= limit; initial++) {
+      await getBasicPokemonByNameId(pokemonstypelist[initial].nome).then((data) => {
+        pokemons.push(data);
+      });
+    }
+
+    resolve(pokemons);
+  });
+
+  return promisse;
+};
+
 const getPokemonByName = (pokemonName) => {
   return PokeAPI.get(pokemonName)
     .then((response) => {
@@ -115,11 +131,35 @@ const getEvolutionsByName = (pokemonName) => {
     });
 };
 
+const getPokemonByType = (typeId) => {
+  return axios
+    .get("https://pokeapi.co/api/v2/type/" + typeId)
+    .then(async(response) => {
+      const type = response.data.pokemon;
+      let pokemonTypeNames = [];
+      let pokemonsList = [];
+
+      for(let pokemon of type)
+      pokemonTypeNames.push(pokemon)
+      let i = 0
+      for (let pokemon of pokemonTypeNames ) {
+        if (pokemon != null) {
+          i++;
+          await getBasicPokemonByNameId(pokemon.pokemon.name).then((data) => {
+            pokemonsList.push(data);
+          });
+        }
+      }
+
+      return pokemonsList;
+    });
+};
 module.exports = {
   getPokemonByName,
   getEvolutionsByName,
   getPokemonBasicOffset,
-  getBasicPokemonByNameId
+  getBasicPokemonByNameId,
+  getPokemonByType
 };
 
 export default PokeAPI;

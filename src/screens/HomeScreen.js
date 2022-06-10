@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Text, View, FlatList } from "react-native";
 
-import { getBasicPokemonByNameId, getPokemonBasicOffset } from "../api/PokeAPI";
+import { getBasicPokemonByNameId, getPokemonBasicOffset,getPokemonByType } from "../api/PokeAPI";
 
 import ErrorComponent from "../components/ErrorComponent";
 import PokeCard from "../components/PokeCard";
@@ -16,6 +16,8 @@ const HomeScreen = ({ route, navigation }) => {
   const [error, setError] = useState(false);
   const [search, setSearch] = useState("");
   const [goSearch, setGoSearch] = useState(false);
+  const [searchType, setSearchType] = useState("");
+  const [goSearchType, setGoSearchType] = useState(false);
   const [pokemonsList, setPokemonsList] = useState(route.params.pokemonsList);
 
   const clearStates = () => {
@@ -39,6 +41,18 @@ const HomeScreen = ({ route, navigation }) => {
     }
   }, [goSearch]);
 
+  useEffect(() => {
+    if (searchType !== "") {
+      getPokemonByType(searchType.toLowerCase()).then((data) => {
+        if (data !== undefined) {
+          setPokemonsList(data);
+          setError("");
+        } else setError(true);
+      });
+      setGoSearchType(false);
+    }
+  }, [goSearchType]);
+
   return (
     <View style={{ marginBottom: 150 }}>
       <SearchBar
@@ -50,6 +64,17 @@ const HomeScreen = ({ route, navigation }) => {
         onEndEditing={() => setGoSearch(true)}
         placeholder="Digite o nome ou id"
       />
+
+      <SearchBar
+        value={searchType}
+        onChangeText={(value) => {
+          setSearchType(value);
+          if (value == "") clearStates();
+        }}
+        onEndEditing={() => setGoSearchType(true)}
+        placeholder="Digite o nome ou id do tipo"
+      />
+
       {error || pokemonsList.length == 1 ? (
         <View style={{ height: 48 }}>
           <ButtonPokedex text="Voltar" onPress={clearStates} />
