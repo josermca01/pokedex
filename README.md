@@ -22,14 +22,23 @@ Clonar o repositorio do projeto.
 
 Tendo feito a clonagem abra o VScode na pasta pokedex
 
-Com a pasta aberta no VScode abrir um novo terminal e executar o seguinte comando
+Com a pasta aberta no VScode abrir um novo terminal e executar os seguintes comandos
 
+- ``` npm install ```
 - ``` expo start ```
 
 Agora em seu aparelho celular será necessario fazer a instalação do expo. Basta procurar na appstore ou na googleplay por expo e será o primeiro resultado a aparecer. Com o expo instaldo será possivel executar o app no celular
 
 
 Feito isso o terminal ou prompt de comando irá mostrar um qrcode e algumas outras opções basta escanear o qrcode com o app instalado e o app será iniciado no celular
+
+## Instalação do app para android
+
+Outra opçao para executar o app via android é baixando o apk disponivel no seginte link 
+
+- ```https://drive.google.com/file/d/1aKvEGe8TQe2ACacEzTYwtZ5PgCX7ji7F/view?usp=sharing```
+
+## Telas do protótipo
 
 Tela de consulta geral dos pokémons (prototipo):
 
@@ -45,12 +54,17 @@ Tela de consulta de um pokémon em especifico (prototipo):
 <br>
 
 
-#### Print das telas Atuais
-![image](https://user-images.githubusercontent.com/71042131/172740685-fa16bda4-8f1c-4822-a726-6819b69800c9.png)
+## Print das telas Atuais
 
-![image](https://user-images.githubusercontent.com/71042131/172740699-0a243f5e-cf71-4181-945f-7e63902e5649.png)
+![image](https://user-images.githubusercontent.com/71042131/173206150-a66a9240-317b-46e1-a037-55005fd4e3c9.png)
 
-![image](https://user-images.githubusercontent.com/71042131/172740713-d48f750c-cba9-44a5-ba90-5e6a606be055.png)
+![image](https://user-images.githubusercontent.com/71042131/173206144-09b00945-2e65-4c1a-ba3f-27044d077fc1.png)
+
+![image](https://user-images.githubusercontent.com/71042131/173206139-ed8d13a6-f27a-480d-a7d2-2db268ca727c.png)
+
+![image](https://user-images.githubusercontent.com/71042131/173206176-f48f944c-856f-45bd-b73b-9a0b0f95e99a.png)
+
+![image](https://user-images.githubusercontent.com/71042131/173206182-fc40ca05-e868-4d6f-b0f9-9359d4867353.png)
 
 ![image](https://user-images.githubusercontent.com/71042131/172740727-52bcc1de-5828-45c1-85c2-164722855027.png)
 
@@ -58,6 +72,7 @@ Tela de consulta de um pokémon em especifico (prototipo):
 
 ![image](https://user-images.githubusercontent.com/71042131/172740760-9ada37f6-58bb-4e6c-98ec-2bda05e1be72.png)
 
-![image](https://user-images.githubusercontent.com/71042131/172740771-54fb27a3-f617-4082-9cf1-37bd55097d45.png)
+![image](https://user-images.githubusercontent.com/71042131/173206131-06bf230b-3148-430a-b3b7-964c56b8a8ed.png)
+
 
 ---
